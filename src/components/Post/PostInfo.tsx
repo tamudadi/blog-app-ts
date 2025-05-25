@@ -11,7 +11,10 @@ export const PostInfo = ({ createdAt, categories }: PostInfoProps) => {
       </div>
       <div className="flex gap-2">
         {categories.map((category) => (
-          <div className="border rounded border-blue-700 p-1 text-xs text-blue-700">
+          <div
+            key={category}
+            className="border rounded border-blue-700 p-1 text-xs text-blue-700"
+          >
             {category}
           </div>
         ))}
