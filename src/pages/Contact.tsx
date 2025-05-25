@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
@@ -97,7 +97,9 @@ export const Contact = () => {
               type="text"
               id="name"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setName(e.target.value)
+              }
               disabled={isSending}
             />
             <p className="text-red-700">{nameErrorMessage}</p>
@@ -113,7 +115,9 @@ export const Contact = () => {
               type="email"
               id="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
               disabled={isSending}
             />
             <p className="text-red-700">{emailErrorMessage}</p>
@@ -129,7 +133,9 @@ export const Contact = () => {
               rows={8}
               id="message"
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                setMessage(e.target.value)
+              }
               disabled={isSending}
             />
             <p className="text-red-700">{messageErrorMessage}</p>

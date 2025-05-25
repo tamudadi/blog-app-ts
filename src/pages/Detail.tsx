@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { PostInfo } from '../components/Post/PostInfo';
-import { Post } from '../data/posts';
+import { Post } from '../types/post';
 
-export const Detail = () => {
+export const Detail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [post, setPost] = useState<Post>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
