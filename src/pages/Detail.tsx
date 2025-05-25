@@ -5,7 +5,7 @@ import { Post } from '../types/post';
 
 export const Detail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const [post, setPost] = useState<Post>();
+  const [post, setPost] = useState<Post | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
 
