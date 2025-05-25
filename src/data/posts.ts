@@ -1,5 +1,5 @@
 // /src/data/posts.js
-type Post = {
+export type Post = {
   id: number;
   title: string;
   thumbnailUrl: string;
